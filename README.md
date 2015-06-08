@@ -49,26 +49,26 @@ I will then go over each file in the codebase and add my own annotations so that
 
 I'll have to read up on a number of patterns/technologies they implement in their codebase. They include:
 
- +observers
- +service objects
- +decorators
- +policies
- +workers
- +automated Rake tasks
- +HAML
- +front-end add-ons (jQuery plugins, skull.js (Backbone add-on), redactor)
+ + observers
+ + service objects
+ + decorators
+ + policies
+ + workers
+ + automated Rake tasks
+ + HAML
+ + front-end add-ons (jQuery plugins, skull.js (Backbone add-on), redactor)
 
 I may also need to read up on Devise, OmniAuth, and their payment processing, as these are pretty involved and possibly integral to how the framework operates.
 
 After this phase I may also be able to merge some of my additional documentation into the Catarse project.
 
-### Phase 4: Organizations & charities (here's what I start making stuff!) (~1 day)
+### Phase 4: Organizations & Charities (I start making stuff!) (~1 day)
 
-In this phase I add all of the database requirements to create organizations, teams, and charities. Because this product is intended to be used by a limited number of charities and organizations, they can for now be created manually through the terminal, so there's no need for a UI for the creation process. However, once charities/organizations exist, they will need show and index views available from the main page.
+In this phase I add all of the database requirements to create organizations, teams, and charities. Because this product is intended to be used by a limited number of charities and organizations, they can for now be created manually through the terminal, so there's no need for a UI for the creation process. However, once charities/organizations exist, organizations will need a show and index view from the main page.
 
-### Phase 5: Fundraising settings for Users and Organizations (~1.5 days)
+### Phase 5: Fundraising dashboard for Users and Organizations (~1.5 days)
 
-The settings page for any user/fundraiser will essentially become its own Backbone app, from which they can track their fundraisers, alter their layouts, and manage any fundraising. In this phase I will make the skeleton of this app, which will be accessed by both organizations and by users.
+The dashboard page for any user/fundraiser will essentially become its own Backbone app, from which they can track their fundraisers, alter their layouts, and manage any fundraising. In this phase I will make the skeleton of this app, which will be accessed by both organizations and by users.
 
 These will replace Catarse's existing fundraising controls. Through this interface, users will be able to control whether their pages are live or not.
 

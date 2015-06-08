@@ -1,13 +1,17 @@
-# Phase 4: User Feeds
+# Phase 4: Organizations & Charities
 
 ## Rails
 ### Models
++ Organization
++ Charity
 
 ### Controllers
-Api::PostsController (feed)
++ Organizations
++ Charities
 
 ### Views
-posts/feed.json.jbuilder
++ Organizations#show
++ Organizations#index
 
 ## Backbone
 ### Models
@@ -15,6 +19,5 @@ posts/feed.json.jbuilder
 ### Collections
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
 
 ## Gems/Libraries
