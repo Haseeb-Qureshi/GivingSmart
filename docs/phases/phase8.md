@@ -2,10 +2,13 @@
 
 ## Rails
 ### Models
++ Team
 
 ### Controllers
++ Teams
 
 ### Views
++ Teams#show
 
 ## Backbone
 ### Models

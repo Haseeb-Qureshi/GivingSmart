@@ -10,17 +10,15 @@
 
 
 ## Backbone
-### Models
 
+### Models
 
 ### Collections
 
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
++ Chart
++ Fundraising (CompositeView)
++ FundraisingListItem
 
 ## Gems/Libraries

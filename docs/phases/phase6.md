@@ -7,6 +7,7 @@
 
 
 ### Views
+Fundraiser#Layout
 
 
 ## Backbone
@@ -15,5 +16,6 @@
 ### Collections
 
 ### Views
++ Magic? (Lots of CompositeViews...)
 
 ## Gems/Libraries

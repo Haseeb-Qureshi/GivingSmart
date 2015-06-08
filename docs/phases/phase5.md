@@ -6,15 +6,16 @@
 ### Controllers
 
 ### Views
-Users#dashboard
-Organizations#dashboard
++ Users#dashboard
++ Organizations#dashboard (w/ navbar, dropdowns, sidebar, side-nav)
 
 ## Backbone
 ### Models
-Organization
-User(?)
++ Organization
++ User(?)
 ### Collections
 ### Views
++ Dashboard
 
 
 ## Gems/Libraries

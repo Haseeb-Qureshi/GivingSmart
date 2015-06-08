@@ -4,6 +4,7 @@
 ### Models
 + Organization
 + Charity
++ Team
 
 ### Controllers
 + Organizations

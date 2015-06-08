@@ -64,7 +64,9 @@ After this phase I may also be able to merge some of my additional documentation
 
 ### Phase 4: Organizations & Charities (I start making stuff!) (~1 day)
 
-In this phase I add all of the database requirements to create organizations, teams, and charities. Because this product is intended to be used by a limited number of charities and organizations, they can for now be created manually through the terminal, so there's no need for a UI for the creation process. However, once charities/organizations exist, organizations will need a show and index view from the main page.
+In this phase I add all of the database requirements to create organizations and charities. Because this product is intended to be used by a limited number of charities and organizations, they can for now be created manually through the terminal, so there's no need for a UI for the creation process. However, once charities/organizations exist, organizations will need a show and index view from the main page.
+
+[Details][phase-four]
 
 ### Phase 5: Fundraising dashboard for Users and Organizations (~1.5 days)
 
@@ -72,19 +74,25 @@ The dashboard page for any user/fundraiser will essentially become its own Backb
 
 These will replace Catarse's existing fundraising controls. Through this interface, users will be able to control whether their pages are live or not.
 
-[Details][phase-three]
+[Details][phase-five]
 
 ### Phase 6: Dynamic layout for fundraising pages (~2 days)
 
-Through the settings page, users will be able to change the layout of their fundraising page. This includes changing the colors (altering the CSS) of the background and key elements, filling in the text and headers, adding a video, etc. All of this gets persisted to the database and is live-previewed during editing.
+Through the dashboard, users will be able to change the layout and content of their fundraising page. This includes changing the colors (altering the CSS) of the background and key elements, filling in the text and headers, adding a video, etc. All of this gets persisted to the database and is live-previewed during editing.
+
+[Details][phase-six]
 
 ### Phase 7: Fundraising features (~1.5 days)
 
 Add charts for fundraising and the ability to add offline donations. Set it up so that organizations can create fundraisers and users can freely participate in those fundraisers using a template auto-populated by the organization. Users can essentially "fork" a fundraiser that an organization is running.
 
+[Details][phase-seven]
+
 ### Phase 8: Team features (~1.5 days)
 
-Allow organizations to create teams, and for users to belong to teams on the same fundraiser. Create inter-relationships so teams are visible from organization page, and users can view their own teams.
+Add teams. Allow organizations to create teams, and for users to belong to teams on the same fundraiser. Create inter-relationships so teams are visible from organization page, and users can view their own teams.
+
+[Details][phase-eight]
 
 
 ### Bonus Features (TBD)
@@ -109,8 +117,8 @@ Allow organizations to create teams, and for users to belong to teams on the sam
 - [ ] Refactor fat views into partials
 - [ ] Refactor user model (god object)
 
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
+[phase-six]: ./docs/phases/phase6.md
+[phase-seven]: ./docs/phases/phase7.md
+[phase-eight]: ./docs/phases/phase8.md
