@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: #
+[heroku]: https://givingsmart.herokuapp.com/
 
 ## Minimum Viable Product
 GivingSmart is a p2p charity-fundraising platform built off of Catarse, an open-source Rails + Backbone framework.
