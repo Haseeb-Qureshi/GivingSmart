@@ -1,4 +1,8 @@
 Catarse::Application.routes.draw do
+  namespace :gsapi, defaults: { format: :json } do
+    
+  end
+
   mount RedactorRails::Engine => '/redactor_rails'
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   devise_for(

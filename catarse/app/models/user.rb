@@ -57,6 +57,8 @@ class User < ActiveRecord::Base
   has_many :category_followers, dependent: :destroy
   has_many :categories, through: :category_followers
   has_many :links, class_name: 'UserLink', inverse_of: :user
+  has_many :organization_admins
+  has_many :orgs_adminning, through: :organization_admins, source: :organization
   has_and_belongs_to_many :recommended_projects, join_table: :recommendations, class_name: 'Project'
 
   accepts_nested_attributes_for :unsubscribes, allow_destroy: true rescue puts "No association found for name 'unsubscribes'. Has it been defined yet?"
