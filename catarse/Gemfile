@@ -47,50 +47,50 @@ gem 'draper' # decoration/presenter
 # Frontend stuff
 gem 'slim-rails' # include Slim as templating language
 gem 'browser' # allows easy access to "browser" variable, inspect version & browser type
-gem "cocoon"
+gem "cocoon" # create dynamically nested forms through associations very easily
 
 # Static pages
-gem 'high_voltage'
+gem 'high_voltage' # Rails static pages generator (link_to "About" page_path('about'))
 
 # Authentication and Authorization
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'devise'
-gem 'ezcrypto'
-gem 'pundit'
+gem 'ezcrypto' # wrapper around OpenSSL for Ruby; encrypts and decrypts with password and salt (AES 128-bit)
+gem 'pundit' # authorization gem; uses policies (inferred "Policy" and "Scope" classes) to create authorization system, allowing different users to do different things
 
 # Email marketing
-gem 'catarse_monkeymail', '>= 0.1.6'
+gem 'catarse_monkeymail', '>= 0.1.6' # MailChimp engine
 
 # HTML manipulation and formatting
-gem 'simple_form'
-gem 'mail_form'
-gem "auto_html"
-gem 'kaminari'
-gem 'redactor-rails', github: 'catarse/redactor-rails'
+gem 'simple_form' # Form DSL for Rails, makes simple forms super easy apparently.
+gem 'mail_form' # Allows you to send an e-mail straight from a form (class will inherit from MailForm::Base)
+gem "auto_html" # Automatically converts links into HTML text with image tags, link tags, Youtube embeds, etc. Call with "auto_html_for :xyz"
+gem 'kaminari' # Pagination gem
+gem 'redactor-rails', github: 'catarse/redactor-rails' # Integrates text-editing interface with Rails. Used for Tumblr/blog style editing box, very nice and sexy out of the box.
 
 # Uploads
-gem 'carrierwave', '~> 0.10.0'
-gem "mini_magick"
+gem 'carrierwave', '~> 0.10.0' # file uploading library. invoked with mount_uploader and AvatarUploader styled classes
+gem "mini_magick" # Ruby interface for ImageMagick, which does automatic photo resizing (thumbnails/previews)
 
 # Other Tools
-gem 'to_xls'
-gem 'ranked-model'
-gem 'feedjira'
-gem 'inherited_resources'
-gem 'has_scope', '>= 0.6.0.rc'
-gem 'spectator-validates_email',  require: 'validates_email'
-gem 'video_info', '>= 1.1.1'
+gem 'to_xls' # exports Ruby data to Excel files
+gem 'ranked-model' # SQL-based gem for efficienctly assigning order on database level for models. include RankedModel; ranks :thing_you_want_them_ranked_by
+gem 'feedjira' # library for fetching and parsing RSS feeds
+gem 'inherited_resources' # allows you to inherit standard RESTful actions in controllers without having to write them out; either inherit from InheritedResources::Base or call inherit_resources in the controller
+gem 'has_scope', '>= 0.6.0.rc' # allows you to create controller filters based on your models' named scopes, calling has_scope :scoped_thing in the controller
+gem 'spectator-validates_email',  require: 'validates_email' # validates email according to the RFC 2822 and 3696 standards; custom validator --> validates :email_address, email: true
+gem 'video_info', '>= 1.1.1' # scrapes video metadata from Youtube, Vimeo, Dailymotion, etc.
 gem 'httparty', '~> 0.6.1' # this version is required by moip gem, otherwise payment confirmation will break
 
 # Translations
-gem 'http_accept_language'
-gem 'routing-filter', '~> 0.4.0.pre'
+gem 'http_accept_language' # makes user-preferred languages (established in HTTP headers) globally available
+gem 'routing-filter', '~> 0.4.0.pre' # adds routing for locales (/de/, /en/), as well as pagination and extensions. "filter" within routes.rb
 
 # Payment
 gem 'moip', github: 'catarse/moip-ruby', ref: 'c0225ad71645cd1df35dafa1e45c9f092b3abb9e'
-gem 'httpclient',     '>= 2.2.5'
+gem 'httpclient',     '>= 2.2.5' # http library for making requests
 
 group :production do
   # Gem used to handle image uploading
@@ -108,7 +108,7 @@ group :production do
   gem 'rails_12factor'
 
   # Monitoring with the new new relic
-  gem 'newrelic_rpm'
+  gem 'newrelic_rpm' # sends information on your app to a dashboard @ rpm.newrelic.com where you can monitor it
 
   # Using dalli and memcachier have not presented significative performance gains
   # Probably this is due to our pattern of cache usage
@@ -117,12 +117,12 @@ group :production do
   #gem 'dalli'
 end
 group :development do
-  gem "rails-erd"
-  gem "letter_opener"
-  gem 'foreman'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'thin'
+  gem "rails-erd" # creates an ERD (entity-relationship diagram) mapping of your rails app; requires Graphviz2.22+ to be installed
+  gem "letter_opener" # lets you view sent e-mails in the browser for development/debugging
+  gem 'foreman' # manages all of the background processes for your app
+  gem 'better_errors' # creates more useful error page that gives more information on stack traces, lets you debug in a real-time REPL, etc.
+  gem 'binding_of_caller' # binds REPL for better_errors
+  gem 'thin' # better light-weight server over webrick
   # Uncomment only for optimization, should be commented on master branch
   # gem 'rack-mini-profiler'
   # gem 'ruby-prof'
@@ -138,24 +138,24 @@ group :test, :development do
 end
 
 group :test do
-  gem 'zonebie'
-  gem 'fakeweb'
-  gem 'poltergeist'
-  gem 'launchy'
-  gem 'database_cleaner'
-  gem 'shoulda'
-  gem 'factory_girl_rails'
-  gem 'capybara',   '~> 2.2.0'
-  gem 'selenium-webdriver'
+  gem 'zonebie' # prevents bugs in code that deal with timezones randomly assigning a zone
+  gem 'fakeweb' # injects fake responses to web requests
+  gem 'poltergeist' # PhantomJS driver for Capybara
+  gem 'launchy' # allows you to load test pages into the browser
+  gem 'database_cleaner' # strategies for cleaning databases, allows you to ensure a clean state for testing
+  gem 'shoulda' # allows you to use shoulda matches in Rspec
+  gem 'factory_girl_rails' # factories for testing models/objects
+  gem 'capybara',   '~> 2.2.0' # integration testing
+  gem 'selenium-webdriver' # language-specific bindings to create browser-based tests
 end
 
-gem 'sass-rails'
-gem 'coffee-rails'
-gem 'compass-rails'
-gem 'uglifier'
-gem 'compass-960-plugin'
-gem 'sprockets'
+gem 'sass-rails' # integrate with SASS (css)
+gem 'coffee-rails' # coffeescript adapter for rails asset pipeline
+gem 'compass-rails' # adapter for compass stylesheet
+gem 'uglifier' # JS minifier
+gem 'compass-960-plugin' # adds 960 grid system to compass stylesheet
+gem 'sprockets' # standard rails library for compiling and serving web assets
 
 # FIXME: Not-anymore-on-development
 # Gems that are with 1 or more years on the vacuum
-gem 'weekdays'
+gem 'weekdays' # adds methods like 5.weekdays_ago, Date.today.weekday?
