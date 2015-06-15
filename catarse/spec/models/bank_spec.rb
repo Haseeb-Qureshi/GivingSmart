@@ -1,4 +1,15 @@
 # coding: utf-8
+# == Schema Information
+#
+# Table name: banks
+#
+#  id         :integer          not null, primary key
+#  name       :text             not null
+#  code       :text             not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe Bank, type: :model do

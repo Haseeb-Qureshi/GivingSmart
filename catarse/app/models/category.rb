@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :integer          not null, primary key
+#  name_pt    :text             not null
+#  created_at :datetime
+#  updated_at :datetime
+#  name_en    :string(255)
+#  name_fr    :string(255)
+#
+
 class Category < ActiveRecord::Base
   has_notifications
   has_many :projects

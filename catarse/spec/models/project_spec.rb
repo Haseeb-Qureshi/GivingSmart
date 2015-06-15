@@ -1,4 +1,45 @@
 # coding: utf-8
+# == Schema Information
+#
+# Table name: projects
+#
+#  id                        :integer          not null, primary key
+#  name                      :text             not null
+#  user_id                   :integer          not null
+#  category_id               :integer          not null
+#  goal                      :decimal(, )
+#  headline                  :text
+#  video_url                 :text
+#  short_url                 :text
+#  created_at                :datetime
+#  updated_at                :datetime
+#  about_html                :text
+#  recommended               :boolean          default(FALSE)
+#  home_page_comment         :text
+#  permalink                 :text             not null
+#  video_thumbnail           :text
+#  state                     :string(255)
+#  online_days               :integer
+#  online_date               :datetime
+#  more_links                :text
+#  first_contributions       :text
+#  uploaded_image            :string(255)
+#  video_embed_url           :string(255)
+#  referral_link             :text
+#  sent_to_analysis_at       :datetime
+#  audited_user_name         :text
+#  audited_user_cpf          :text
+#  audited_user_moip_login   :text
+#  audited_user_phone_number :text
+#  sent_to_draft_at          :datetime
+#  rejected_at               :datetime
+#  traffic_sources           :text
+#  budget                    :text
+#  full_text_index           :tsvector
+#  budget_html               :text
+#  expires_at                :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe Project, type: :model do

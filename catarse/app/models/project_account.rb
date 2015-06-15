@@ -1,3 +1,31 @@
+# == Schema Information
+#
+# Table name: project_accounts
+#
+#  id                    :integer          not null, primary key
+#  project_id            :integer          not null
+#  bank_id               :integer
+#  email                 :text             not null
+#  state_inscription     :text
+#  address_street        :text             not null
+#  address_number        :text             not null
+#  address_complement    :text
+#  address_city          :text             not null
+#  address_neighbourhood :text             not null
+#  address_state         :text             not null
+#  address_zip_code      :text             not null
+#  phone_number          :text             not null
+#  agency                :text             not null
+#  agency_digit          :text             not null
+#  account               :text             not null
+#  account_digit         :text             not null
+#  owner_name            :text             not null
+#  owner_document        :text             not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  account_type          :text
+#
+
 class ProjectAccount < ActiveRecord::Base
   belongs_to :project
   belongs_to :bank

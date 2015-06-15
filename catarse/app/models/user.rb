@@ -1,4 +1,53 @@
 # coding: utf-8
+# == Schema Information
+#
+# Table name: users
+#
+#  id                          :integer          not null, primary key
+#  email                       :text
+#  name                        :text
+#  newsletter                  :boolean          default(FALSE)
+#  created_at                  :datetime
+#  updated_at                  :datetime
+#  admin                       :boolean          default(FALSE)
+#  address_street              :text
+#  address_number              :text
+#  address_complement          :text
+#  address_neighbourhood       :text
+#  address_city                :text
+#  address_state               :text
+#  address_zip_code            :text
+#  phone_number                :text
+#  locale                      :text             default("pt"), not null
+#  cpf                         :text
+#  encrypted_password          :string(128)      default(""), not null
+#  reset_password_token        :string(255)
+#  reset_password_sent_at      :datetime
+#  remember_created_at         :datetime
+#  sign_in_count               :integer          default(0)
+#  current_sign_in_at          :datetime
+#  last_sign_in_at             :datetime
+#  current_sign_in_ip          :string(255)
+#  last_sign_in_ip             :string(255)
+#  twitter                     :string(255)
+#  facebook_link               :string(255)
+#  other_link                  :string(255)
+#  uploaded_image              :text
+#  moip_login                  :string(255)
+#  state_inscription           :string(255)
+#  channel_id                  :integer
+#  deactivated_at              :datetime
+#  reactivate_token            :text
+#  address_country             :text
+#  country_id                  :integer
+#  authentication_token        :text             not null
+#  zero_credits                :boolean          default(FALSE)
+#  about_html                  :text
+#  cover_image                 :text
+#  permalink                   :text
+#  subscribed_to_project_posts :boolean          default(TRUE)
+#
+
 class User < ActiveRecord::Base
   include User::OmniauthHandler
   has_notifications

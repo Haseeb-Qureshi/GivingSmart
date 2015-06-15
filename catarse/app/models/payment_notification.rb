@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: payment_notifications
+#
+#  id              :integer          not null, primary key
+#  contribution_id :integer          not null
+#  extra_data      :text
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  payment_id      :integer
+#
+
 class PaymentNotification < ActiveRecord::Base
   belongs_to :contribution
   serialize :extra_data, JSON

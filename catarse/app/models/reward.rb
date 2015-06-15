@@ -1,4 +1,21 @@
 # coding: utf-8
+# == Schema Information
+#
+# Table name: rewards
+#
+#  id                    :integer          not null, primary key
+#  project_id            :integer          not null
+#  minimum_value         :decimal(, )      not null
+#  maximum_contributions :integer
+#  description           :text             not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  row_order             :integer
+#  days_to_delivery      :integer
+#  last_changes          :text
+#  deliver_at            :datetime
+#
+
 class Reward < ActiveRecord::Base
   include RankedModel
   include ERB::Util

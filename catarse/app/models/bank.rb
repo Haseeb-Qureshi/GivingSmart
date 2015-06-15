@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: banks
+#
+#  id         :integer          not null, primary key
+#  name       :text             not null
+#  code       :text             not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Bank < ActiveRecord::Base
   has_many :bank_accounts
 

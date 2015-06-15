@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: category_followers
+#
+#  id          :integer          not null, primary key
+#  category_id :integer          not null
+#  user_id     :integer          not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe CategoryFollower, :type => :model do

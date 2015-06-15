@@ -1,3 +1,40 @@
+# == Schema Information
+#
+# Table name: contribution_details
+#
+#  id                :integer
+#  contribution_id   :integer
+#  payment_id        :integer
+#  user_id           :integer
+#  project_id        :integer
+#  reward_id         :integer
+#  permalink         :text
+#  project_name      :text
+#  user_name         :text
+#  email             :text
+#  uploaded_image    :text
+#  key               :text
+#  value             :decimal(, )
+#  installments      :integer
+#  installment_value :decimal(, )
+#  state             :text
+#  anonymous         :boolean
+#  payer_email       :text
+#  gateway           :text
+#  gateway_id        :text
+#  gateway_fee       :decimal(, )
+#  gateway_data      :json
+#  payment_method    :text
+#  project_state     :string(255)
+#  has_rewards       :boolean
+#  created_at        :datetime
+#  pending_at        :datetime
+#  paid_at           :datetime
+#  refused_at        :datetime
+#  pending_refund_at :datetime
+#  refunded_at       :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe ContributionDetail, type: :model do

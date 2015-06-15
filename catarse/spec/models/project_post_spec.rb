@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: project_posts
+#
+#  id           :integer          not null, primary key
+#  user_id      :integer          not null
+#  project_id   :integer          not null
+#  title        :text             not null
+#  comment_html :text             not null
+#  created_at   :datetime
+#  updated_at   :datetime
+#  exclusive    :boolean          default(FALSE)
+#
+
 require 'rails_helper'
 
 RSpec.describe ProjectPost, type: :model do

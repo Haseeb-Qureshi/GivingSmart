@@ -1,4 +1,35 @@
 # coding: utf-8
+# == Schema Information
+#
+# Table name: contributions
+#
+#  id                    :integer          not null, primary key
+#  project_id            :integer          not null
+#  user_id               :integer          not null
+#  reward_id             :integer
+#  value                 :decimal(, )      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  anonymous             :boolean          default(FALSE), not null
+#  notified_finish       :boolean          default(FALSE)
+#  payer_name            :text
+#  payer_email           :text             not null
+#  payer_document        :text
+#  address_street        :text
+#  address_number        :text
+#  address_complement    :text
+#  address_neighbourhood :text
+#  address_zip_code      :text
+#  address_city          :text
+#  address_state         :text
+#  address_phone_number  :text
+#  payment_choice        :text
+#  payment_service_fee   :decimal(, )
+#  referral_link         :text
+#  country_id            :integer
+#  deleted_at            :datetime
+#
+
 class Contribution < ActiveRecord::Base
   has_notifications
 

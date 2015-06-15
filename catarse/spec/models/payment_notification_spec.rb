@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: payment_notifications
+#
+#  id              :integer          not null, primary key
+#  contribution_id :integer          not null
+#  extra_data      :text
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  payment_id      :integer
+#
+
 require 'rails_helper'
 
 RSpec.describe PaymentNotification, type: :model do

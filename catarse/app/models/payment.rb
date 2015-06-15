@@ -1,3 +1,27 @@
+# == Schema Information
+#
+# Table name: payments
+#
+#  id                :integer          not null, primary key
+#  contribution_id   :integer          not null
+#  state             :text             not null
+#  key               :text             not null
+#  gateway           :text             not null
+#  gateway_id        :text
+#  gateway_fee       :decimal(, )
+#  gateway_data      :json
+#  payment_method    :text             not null
+#  value             :decimal(, )      not null
+#  installments      :integer          default(1), not null
+#  installment_value :decimal(, )
+#  paid_at           :datetime
+#  refused_at        :datetime
+#  pending_refund_at :datetime
+#  refunded_at       :datetime
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
 class Payment < ActiveRecord::Base
   include Shared::StateMachineHelpers
   include Payment::PaymentEngineHandler

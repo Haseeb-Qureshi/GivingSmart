@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: user_links
+#
+#  id         :integer          not null, primary key
+#  link       :text             not null
+#  user_id    :integer          not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe UserLink, :type => :model do

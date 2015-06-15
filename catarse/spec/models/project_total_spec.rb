@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: project_totals
+#
+#  project_id                :integer
+#  pledged                   :decimal(, )
+#  progress                  :decimal(, )
+#  total_payment_service_fee :decimal(, )
+#  total_contributions       :integer
+#
+
 require 'rails_helper'
 
 RSpec.describe ProjectTotal, type: :model do
